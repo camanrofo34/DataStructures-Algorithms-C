@@ -23,6 +23,7 @@ negative numbers.
 using namespace std;
 
 // Function to perform bead sort on an array
+// Receives an array and its length as parameters
 void beadSort(int *a, int len) {
     // Find the maximum element
     int max = a[0];
@@ -56,16 +57,4 @@ void beadSort(int *a, int len) {
         a[i] = j;
     }
     delete[] beads;
-}
-
-// driver function to test the algorithm
-int main() {
-    int a[] = {5, 3, 1, 7, 4, 1, 1, 20};
-    int len = sizeof(a) / sizeof(a[0]);
-
-    beadSort(a, len);
-
-    for (int i = 0; i < len; i++) printf("%d ", a[i]);
-
-    return 0;
 }
